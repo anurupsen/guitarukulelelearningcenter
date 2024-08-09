@@ -12,20 +12,34 @@
 
 
 
-// function disableselect(e){
-// return false
-// }
-// function reEnable(){
-// return true
-// }
-// document.onselectstart=new Function ("return false")
-// if (window.sidebar){
-// document.onmousedown=disableselect
-// document.onclick=reEnable
-// }
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
 
 // cancel selection 
 
+
+// FAQ section start
+
+let accordions = document.querySelectorAll('.accordion-container .accordion');
+
+accordions.forEach(acco =>{
+    acco.onclick = () =>{
+        accordions.forEach(subAcco => { subAcco.classList.remove('active') });
+        acco.classList.add('active');
+    }
+})
+
+
+// navbar section start
 
 let navbar = document.querySelector('.header .navbar');
 
@@ -37,19 +51,21 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
+
+// video section start
 let mainVid = document.querySelector('.main-video');
 
-document.querySelectorAll('.course-3 .box .video video').forEach(vid =>{
-
-    vid.onclick = () =>{
+document.querySelectorAll('video').forEach(vid => {
+    vid.onclick = () => {
         let src = vid.getAttribute('src');
         mainVid.classList.add('active');
         mainVid.querySelector('video').src = src;
     }
-
 });
 
-document.querySelector('#close-vid').onclick = () =>{
+document.querySelector('#close-vid').onclick = () => {
     mainVid.classList.remove('active');
+    mainVid.querySelector('video').pause(); // Pause the video
 }
+
 
