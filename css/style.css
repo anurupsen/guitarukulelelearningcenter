@@ -211,7 +211,7 @@ section {
 
 .home .content h3 {
   color: #302851;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .home .content p {
@@ -281,8 +281,9 @@ section {
 }
 
 .about .image img {
-  width: 50%;
-  margin-left: 10rem;
+  width: 90%;
+  border-radius: 1rem;
+  margin-left: 1rem;
 }
 
 .about .content {
@@ -306,7 +307,7 @@ section {
 
 /* about section ends */
 
-/* Course 1,2 section start */
+/* Course 1 section start */
 
 .course-1 {
   gap: 1.5rem;
@@ -331,13 +332,64 @@ section {
 }
 
 .course-1 .box p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #666;
   line-height: 2.5;
   padding: 1rem 0;
+  font-weight: 400;
+  text-align: justify;
 }
 
-/* course 1,2 section ends */
+/* course 1 section ends */
+
+/* course-3 section start */
+
+.course-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.course-2 .box {
+  text-align: center;
+  overflow: hidden;
+}
+
+.course-2 .box .video {
+  height: 50rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.course-2 .box .video iframe {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.course-2 .box .content {
+  padding-top: 1rem;
+}
+
+.course-2 .box .content h3 {
+  font-size: 1.7rem;
+  color: #302851;
+  padding: .5rem 0;
+}
+
+.course-2 .box .content p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* course-2 section ends */
 
 /* course-3 section start */
 
@@ -355,7 +407,7 @@ section {
   overflow: hidden;
 }
 
-.course-3 .box:hover .video video {
+.course-3 .box:hover .video iframe {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -368,29 +420,12 @@ section {
   position: relative;
 }
 
-.course-3 .box .video video {
+.course-3 .box .video iframe {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
-}
-
-.course-3 .box .video i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 2rem;
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  border-radius: 50%;
-  background: #fff;
-  color: #302851;
-  pointer-events: none;
-  z-index: 10;
 }
 
 .course-3 .box .content {
@@ -409,54 +444,6 @@ section {
 }
 
 /* course-3 section ends */
-
-/* course-3 video section start */
-
-.main-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  object-fit: cover;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  display: none;
-}
-
-.main-video.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-video #close-vid {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 6rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-.main-video video {
-  height: 90%;
-  width: 80%;
-  border: 0.5rem solid #fff;
-  border-radius: .5rem;
-}
-
-/* course-3 video section start */
 
 
 /* teacher section start */
@@ -666,6 +653,7 @@ section {
   line-height: 2;
   font-size: 1.4rem;
   color: #666;
+  text-transform: none;
 }
 
 .contact .row {
@@ -832,6 +820,7 @@ section {
 
 .FAQ-container .accordion-container .accordion.active .accordion-heading h3{
   color:#fff;
+  text-transform: none;
 }
 
 .FAQ-container .accordion-container .accordion.active .accordion-heading i{
@@ -842,7 +831,13 @@ section {
 
 .FAQ-container .accordion-container .accordion.active .accordion-content{
   display: block;
+  text-transform: capitalize;
 }
+
+.FAQ-container .accordion-container .accordion.active .accordion-content span{
+  color: #224bcf;
+}
+
 
 .FAQ-container .accordion-container .accordion .accordion-heading{
   display: flex;
@@ -1040,15 +1035,6 @@ ul{
   }
   .about .content h3 {
     font-size: 3rem;
-  }
-  .main-video video {
-    height: 70%;
-    width: 90%;
-    border-width: .2rem;
-  }
-
-  .main-video #close-vid{
-    top: 5rem;
   }
 
 }
