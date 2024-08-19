@@ -64,6 +64,46 @@ section {
 
 /* BUtton section ends */
 
+/* top-heading start */
+
+.top-heading{
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-shadow: 0px 2px 5px #484040 ;
+}
+
+.top-heading span{
+  color: #224bcf;
+}
+
+
+/* top-heading ends */
+
+/* scroll button */
+
+#scroll-top{
+  position: fixed;
+  top: -50%;
+  right:2rem;
+  padding: 1rem;
+  background: #224bcf;
+  color:#fff;
+  border-radius: 50%;
+  transition: 1s linear;
+  z-index: 1000;
+}
+
+#scroll-top img{
+  height: 5rem;
+  width: 100%;
+}
+
+#scroll-top.active{
+  top:calc(100% - 12rem)
+}
+
+
 /* header section start */
 
 .heading {
