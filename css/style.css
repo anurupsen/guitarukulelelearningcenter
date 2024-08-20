@@ -1034,7 +1034,7 @@ ul{
 
 }
 
-@media (max-width: 1414px) {
+@media (max-width: 1350px) {
   #menu-btn {
     display: inline-block;
   }
